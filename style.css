@@ -1,0 +1,319 @@
+body {
+    background: linear-gradient(135deg, #1a1a1a, #3a1a5e);
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container, .features, .pricing, .socials, footer {
+    padding: 50px 20px;
+}
+
+/* Лого и заголовок */
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #ff00ff, #7700ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+.site-title {
+    font-size: 3em;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #ff00ff, #7700ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px #ff00ff;
+}
+
+/* Навигация */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 20px;
+    border-bottom: 2px solid #7700ff;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    background: #7700ff;
+}
+
+/* Бургер */
+.menu-toggle {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+/* Кнопки */
+.download-btn, .buy-btn, .social-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #ff00ff, #7700ff);
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.download-btn:hover, .buy-btn:hover, .social-btn:hover {
+    background: linear-gradient(45deg, #ff00ff, #4400ff);
+    box-shadow: 0 0 15px #ff00ff;
+}
+
+/* Карточки */
+.feature-list, .pricing-list, .social-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-card, .pricing-card, .social-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    width: 240px;
+    text-align: center;
+    border: 2px solid #7700ff;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-card:hover, .pricing-card:hover, .social-card:hover {
+    transform: scale(1.07);
+}
+
+/* Иконки */
+.feature-card img, .social-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Соцсети */
+.social-card.discord { border-color: #5865F2; }
+.social-card.telegram { border-color: #0088cc; }
+
+/* Футер */
+footer {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #7700ff;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background: #2c2c2c;
+    margin: 10% auto;
+    padding: 20px;
+    border: 2px solid #7700ff;
+    width: 90%;
+    max-width
+}
+
+/* Видео пользователей */
+.videos {
+    padding: 50px 20px;
+}
+
+.video-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.video-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #7700ff;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+    width: 360px;
+}
+
+.video-card iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+}
+
+/* FAQ в модалке */
+.faq button {
+    background: none;
+    border: none;
+    color: #ff00ff;
+    font-size: 1.1em;
+    margin: 10px 0;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.faq button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    color: #ccc;
+    text-align: left;
+}
+.reviews {
+    padding: 50px 20px;
+}
+
+.review-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.review-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    text-align: left;
+    border: 2px solid #7700ff;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.review-card:hover {
+    transform: scale(1.05);
+}
+
+.review-card h3 {
+    margin: 0 0 10px;
+    color: #ff00ff;
+}
+
+.review-card p {
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+
+.rating-bar {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    height: 10px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.rating-fill {
+    background: linear-gradient(90deg, #ff00ff, #7700ff);
+    height: 100%;
+    border-radius: 6px;
+}
+
+.rating-text {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9em;
+    text-align: right;
+    color: #fff;
+}
+/* Модалка */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #2a003f, #550077);
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    color: #fff;
+    border: 2px solid #ff00ff;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.close-btn {
+    color: #ff00ff;
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.faq-question {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #ff99ff;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background: rgba(255, 0, 255, 0.2);
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    margin-top: 5px;
+    border-left: 3px solid #ff00ff;
+    border-radius: 6px;
+    color: #ddd;
+    font-size: 0.95em;
+}
